@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {% for gambar in images %}
+        {{ gambar|safe }}
+        <a href="{{ gambar.find('a').find('img')['src']|safe }}">
+            {{ gambar.find('a').find('img')['alt']|safe }}
+        </a>
+    {% endfor %}
+
+{% endblock %}
+
