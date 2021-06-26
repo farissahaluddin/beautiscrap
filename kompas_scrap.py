@@ -9,9 +9,9 @@ berita_trending = hai.find(attrs={'class': 'trenLatest'})
 #print(berita_trending)
 
 titles = berita_trending.findAll(attrs={'class': 'trenLatest__title'})
-for judul in titles:
-  print(judul.text)
+#for judul in titles:
+#print(judul.text)
 
 images = berita_trending.findAll(attrs={'class': 'trenLatest__img'})
 for gambar in images:
-   print(gambar.find('a').find('img'))
+   print(gambar.find('a').find('img')['alt'])
